@@ -1,9 +1,29 @@
-#  පරිඝනකයේ ස්ථාපනය කර ගැනීමට 
->>to install some module for secific python
-https://docs.python.org/3/installing/index.html
+# to install python package to specific python version when you are working with different python version
 
->> Getting Started With PyCSP
-https://github.com/runefriborg/pycsp/wiki/Getting_Started_With_PyCSP#installing
+sudo python3.6 -m pip install pycsp
+sudo python3.6 setup.py install
 
->> Pycsp Examples 
-https://github.com/runefriborg/pycsp/tree/master/examples
+# sudo      > to get 
+# python3.6 > your python version which you want to install on
+# pycsp     > name of python package which you are installing
+
+#-------------------------------------------------------------------------------------------------------
+# to import python package 
+import pycsp.parallel as pycsp # using as pycsp on your code space
+from pycsp.parallel import *   # open full module to your code space
+
+
+#-------------------------------------------------------------------------------------------------------
+# to know which python pycsp version your are using
+print(pycsp.version)    # this for when you import packge as 'pycsp'
+
+
+
+
+# links
+# >>to install some module for secific python
+# https://docs.python.org/3/installing/index.html
+# >> Getting Started With PyCSP
+# https://github.com/runefriborg/pycsp/wiki/Getting_Started_With_PyCSP#installing
+# >> Pycsp Examples 
+# https://github.com/runefriborg/pycsp/tree/master/examples
