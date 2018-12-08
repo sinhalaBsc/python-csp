@@ -1,14 +1,13 @@
+# put reader() and writer() functions inside method
 
-#  sudo python3.6 -m pip install pycsp
-#import pycsp.parallel as pycsp
 import time
 import multiprocessing
 import sys
 from pycsp.parallel import *
-#from pycsp import *
+
 
 @process
-def send(cout, idata):
+def send(cout, idata): 
     wrt=cout.writer()
     wrt(idata)
 
@@ -19,9 +18,9 @@ def recv(cin):
     msg=rdr()
     print('Got: ',msg)
 
-c= Channel() # channel_var= Channel('channel_name')
+c= Channel()                   # define channel
 
-Parallel(send(c,200),recv(c))
+Parallel(send(c,200),recv(c))  # execute the parallel process
 
 shutdown()
 
