@@ -6,7 +6,7 @@ from pycsp.parallel import *
 
 @process
 def send(cout, idata):
-    cout('4500')
+    cout(idata)
 
 @process
 def recv(cin):
