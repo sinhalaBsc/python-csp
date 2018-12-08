@@ -1,0 +1,21 @@
+import time
+import multiprocessing
+import sys
+from pycsp.parallel import *
+
+
+@process
+def send(cout, idata):
+    cout('4500')
+
+@process
+def recv(cin):
+    time.sleep(1)
+    msg=cin()
+    print('Got: ',msg)
+
+c= Channel() # channel_var= Channel('channel_name')
+
+Parallel(send(c.writer(),200),recv(c.reader()))
+
+shutdown()
