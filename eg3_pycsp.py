@@ -1,11 +1,21 @@
+# this script written for following rules in 'pycsp'
 
-#  sudo python3.6 -m pip install pycsp
-#import pycsp.parallel as pycsp
+'''
+ * you can store(write) only one data at one time on the channel.when read that
+   written data then only you can write your next data on channel.
+
+ * If channel haven't any data to read that process will waiting until that
+   channel get write data from somewhere(from other process) to read.
+
+ * In the program, only Parallel() method's inside functions are working as multiprocess.
+
+'''
+
 import time
 import multiprocessing
 import sys
 from pycsp.parallel import *
-#from pycsp import *
+
 
 shareData=100
 
@@ -41,21 +51,3 @@ print('end process')
 
 
 shutdown()
-
-'''
- * you can store(write) only one data at one time on the channel.when read that
-   written data then only you can write your next data on channel.
-
- * If channel haven't any data to read that process will waiting until that
-   channel get write data from somewhere(from other process) to read.
-
- * In the program, only Parallel() method's inside functions are working as multiprocess.
-
-'''
- 
-
-
-
-
- 
-
